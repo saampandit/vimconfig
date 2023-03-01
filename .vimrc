@@ -76,6 +76,12 @@ let python_highlight_all = 1
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+" Javascript Indent Configuration 
+augroup FileTypeSpecificAutocommands
+autocmd FileType javascript setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType jsx setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
 " coc.nvim configuration
 " set statusline^=%{coc#status()}
 " Add (Neo)Vim's native statusline support.
